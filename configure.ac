@@ -23,7 +23,7 @@
 AC_PREREQ(2.57)
 AC_INIT([xf86-input-elographics],
         1.4.1,
-        [https://bugs.freedesktop.org/enter_bug.cgi?product=xorg],
+        [https://gitlab.freedesktop.org/xorg/driver/xf86-input-elographics/issues],
         xf86-input-elographics)
 
 AC_CONFIG_SRCDIR([Makefile.am])
