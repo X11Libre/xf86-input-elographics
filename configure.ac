@@ -22,7 +22,7 @@
 
 AC_PREREQ(2.57)
 AC_INIT([xf86-input-elographics],
-        1.4.1,
+        1.4.2,
         [https://gitlab.freedesktop.org/xorg/driver/xf86-input-elographics/issues],
         xf86-input-elographics)
 
