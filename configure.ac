@@ -20,22 +20,23 @@
 #
 # Process this file with autoconf to produce a configure script
 
-AC_PREREQ(2.57)
+# Initialize Autoconf
+AC_PREREQ([2.60])
 AC_INIT([xf86-input-elographics],
         1.4.2,
         [https://gitlab.freedesktop.org/xorg/driver/xf86-input-elographics/issues],
         xf86-input-elographics)
-
 AC_CONFIG_SRCDIR([Makefile.am])
 AC_CONFIG_AUX_DIR(.)
-AM_INIT_AUTOMAKE([dist-xz])
+AC_CONFIG_HEADERS([config.h])
 
+# Initialize Automake
+AM_INIT_AUTOMAKE([dist-xz])
 AM_MAINTAINER_MODE
 
 # Require xorg-macros: XORG_CWARNFLAGS, XORG_CHANGELOG
 m4_ifndef([XORG_MACROS_VERSION], [AC_FATAL([must install xorg-macros 1.2 or later before running autoconf/autogen])])
 XORG_MACROS_VERSION(1.2)
-AM_CONFIG_HEADER([config.h])
 
 # Checks for programs.
 AC_DISABLE_STATIC
