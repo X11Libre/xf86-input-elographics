@@ -23,8 +23,8 @@
 # Initialize Autoconf
 AC_PREREQ([2.60])
 AC_INIT([xf86-input-elographics],
-        1.4.2,
-        [https://gitlab.freedesktop.org/xorg/driver/xf86-input-elographics/issues],
+        [1.4.3],
+        [https://gitlab.freedesktop.org/xorg/driver/xf86-input-elographics/-/issues],
         xf86-input-elographics)
 AC_CONFIG_SRCDIR([Makefile.am])
 AC_CONFIG_AUX_DIR(.)
