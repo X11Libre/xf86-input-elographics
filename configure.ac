@@ -39,10 +39,8 @@ m4_ifndef([XORG_MACROS_VERSION],
 XORG_MACROS_VERSION(1.8)
 XORG_DEFAULT_OPTIONS
 
-# Checks for programs.
-AC_DISABLE_STATIC
-AC_PROG_LIBTOOL
-AC_PROG_CC
+# Initialize libtool
+LT_INIT([disable-static])
 
 AH_TOP([#include "xorg-server.h"])
 
