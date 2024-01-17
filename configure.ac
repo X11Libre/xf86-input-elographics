@@ -25,7 +25,7 @@ AC_PREREQ([2.60])
 AC_INIT([xf86-input-elographics],
         [1.4.3],
         [https://gitlab.freedesktop.org/xorg/driver/xf86-input-elographics/-/issues],
-        xf86-input-elographics)
+        [xf86-input-elographics])
 AC_CONFIG_SRCDIR([Makefile.am])
 AC_CONFIG_AUX_DIR(.)
 AC_CONFIG_HEADERS([config.h])
@@ -45,8 +45,8 @@ LT_INIT([disable-static])
 AH_TOP([#include "xorg-server.h"])
 
 AC_ARG_WITH(xorg-module-dir,
-            AC_HELP_STRING([--with-xorg-module-dir=DIR],
-                           [Default xorg module directory [[default=$libdir/xorg/modules]]]),
+            AS_HELP_STRING([--with-xorg-module-dir=DIR],
+              [Default xorg module directory [[default=$libdir/xorg/modules]]]),
             [moduledir="$withval"],
             [moduledir="$libdir/xorg/modules"])
 inputdir=${moduledir}/input
@@ -64,7 +64,6 @@ XORG_CFLAGS="$CWARNFLAGS $XORG_CFLAGS"
 # Checks for libraries.
 
 # Checks for header files.
-AC_HEADER_STDC
 
 DRIVER_NAME=elographics
 AC_SUBST([DRIVER_NAME])
