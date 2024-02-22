@@ -4,6 +4,7 @@ Makefile.in
 *.lo
 aclocal.m4
 autom4te.cache
+compile
 config.guess
 config.h
 config.h.in
@@ -21,3 +22,4 @@ stamp-h1
 xf86-input-elographics-*.tar.*
 ChangeLog
 tags
+man/elographics.4
