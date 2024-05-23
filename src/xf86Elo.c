@@ -875,10 +875,8 @@ xf86EloControl(DeviceIntPtr	dev,
     DBG(2, ErrorF("Done\n"));
     return Success;
 
-#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) * 100 + GET_ABI_MINOR(ABI_XINPUT_VERSION) >= 1901
   case DEVICE_ABORT:
     return Success;
-#endif
 
   default:
       ErrorF("unsupported mode=%d\n", mode);
@@ -942,11 +940,7 @@ xf86EloUninit(InputDriverPtr	drv,
   xf86DeleteInput(pInfo, 0);
 }
 
-static
-#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) >= 18
-const
-#endif
-char *default_options[] = {
+static const char *default_options[] = {
   "BaudRate", "9600",
   "StopBits", "1",
   "DataBits", "8",
