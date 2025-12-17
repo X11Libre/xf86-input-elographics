@@ -61,14 +61,5 @@ XORG_DRIVER_CHECK_EXT(XINPUT, inputproto)
 PKG_CHECK_MODULES(XORG, [xorg-server >= 1.18.0] xproto $REQUIRED_MODULES)
 sdkdir=$(pkg-config --variable=sdkdir xorg-server)
 
-# Checks for libraries.
-
-# Checks for header files.
-
-# Checks for library functions
-# We don't use strlcat, strlcpy, or timingsafe_memcmp, but check to quiet
-# -Wredundant-decls warning from xorg/os.h which will otherwise redefine them.
-AC_CHECK_FUNCS([strlcat strlcpy timingsafe_memcmp])
-
 AC_CONFIG_FILES([Makefile src/Makefile man/Makefile])
 AC_OUTPUT
