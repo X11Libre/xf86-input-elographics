@@ -26,8 +26,8 @@
 # TODO: -nostdlib/-Bstatic/-lgcc platform magic, not installing the .a, etc.
 AM_CFLAGS = $(CWARNFLAGS) $(XORG_CFLAGS)
 
-@DRIVER_NAME@_drv_la_LTLIBRARIES = @DRIVER_NAME@_drv.la
-@DRIVER_NAME@_drv_la_LDFLAGS = -module -avoid-version
-@DRIVER_NAME@_drv_ladir = @inputdir@
+elographics_drv_la_LTLIBRARIES = elographics_drv.la
+elographics_drv_la_LDFLAGS = -module -avoid-version
+elographics_drv_ladir = @inputdir@
 
-@DRIVER_NAME@_drv_la_SOURCES = xf86Elo.c
+elographics_drv_la_SOURCES = xf86Elo.c
