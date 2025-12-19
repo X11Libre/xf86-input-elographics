@@ -53,7 +53,7 @@ AC_ARG_WITH(xorg-module-dir,
 inputdir=${moduledir}/input
 AC_SUBST(inputdir)
 
-PKG_CHECK_MODULES(XORG, [xorg-server >= 25.0.0] xproto randrproto inputproto)
+PKG_CHECK_MODULES(XORG, [xorg-server >= 25.0.0] xproto inputproto)
 
 AC_CONFIG_FILES([Makefile src/Makefile man/Makefile])
 AC_OUTPUT
