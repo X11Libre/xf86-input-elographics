@@ -1085,9 +1085,9 @@ _X_EXPORT InputDriverRec ELOGRAPHICS = {
     default_options
 };
 
-static pointer
-Plug(pointer	module,
-     pointer	options,
+static void *
+Plug(void *module,
+     void *options,
      int	*errmaj,
      int	*errmin)
 {
@@ -1097,7 +1097,7 @@ Plug(pointer	module,
 }
 
 static void
-Unplug(pointer	p)
+Unplug(void *p)
 {
   DBG(1, ErrorF("EloUnplug\n"));
 }
