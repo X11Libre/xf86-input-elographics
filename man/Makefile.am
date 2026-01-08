@@ -27,16 +27,13 @@
 DRIVER_MAN_SUFFIX = 4
 
 drivermandir = $(mandir)/man$(DRIVER_MAN_SUFFIX)
-
-driverman_PRE = elographics.man
-
-driverman_DATA = $(driverman_PRE:man=$(DRIVER_MAN_SUFFIX))
+driverman_DATA = elographics.$(DRIVER_MAN_SUFFIX)
 
 EXTRA_DIST = elographics.man
 
 CLEANFILES = $(driverman_DATA)
 
-SUFFIXES = .$(DRIVER_MAN_SUFFIX) .man
+# SUFFIXES = .$(DRIVER_MAN_SUFFIX) .man
 
 .man.$(DRIVER_MAN_SUFFIX):
-	$(AM_V_GEN)$(SED) -e 's|__packagestring__|$(PACKAGE_STRING)|' < $< > $@
+	cp $< $@
