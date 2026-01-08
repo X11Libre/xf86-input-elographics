@@ -1,39 +1,12 @@
+# SPDX-License-Identifier: MIT OR X11
 #
-# Copyright 2005 Sun Microsystems, Inc.  All rights reserved.
-#
-# Permission to use, copy, modify, distribute, and sell this software and its
-# documentation for any purpose is hereby granted without fee, provided that
-# the above copyright notice appear in all copies and that both that
-# copyright notice and this permission notice appear in supporting
-# documentation.
-#
-# The above copyright notice and this permission notice shall be included
-# in all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-# OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-# IN NO EVENT SHALL THE OPEN GROUP BE LIABLE FOR ANY CLAIM, DAMAGES OR
-# OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-# ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-# OTHER DEALINGS IN THE SOFTWARE.
-#
-# Except as contained in this notice, the name of the copyright holders shall
-# not be used in advertising or otherwise to promote the sale, use or
-# other dealings in this Software without prior written authorization
-# from the copyright holders.
+# Copyright © 2026 Enrico Weigelt, metux IT consult <info@metux.net>
 #
 
-DRIVER_MAN_SUFFIX = 4
+drvmandir = @xlibre_driver_man_dir@
+drvman_DATA = @xlibre_driver_name@.@xlibre_driver_man_section@
 
-drivermandir = $(mandir)/man$(DRIVER_MAN_SUFFIX)
-driverman_DATA = elographics.$(DRIVER_MAN_SUFFIX)
+CLEANFILES = $(drvman_DATA)
 
-EXTRA_DIST = elographics.man
-
-CLEANFILES = $(driverman_DATA)
-
-# SUFFIXES = .$(DRIVER_MAN_SUFFIX) .man
-
-.man.$(DRIVER_MAN_SUFFIX):
+.man.@xlibre_driver_man_section@:
 	cp $< $@
