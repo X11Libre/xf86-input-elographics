@@ -29,5 +29,4 @@ AM_CFLAGS = $(CWARNFLAGS) $(XORG_CFLAGS)
 elographics_drv_la_LTLIBRARIES = elographics_drv.la
 elographics_drv_la_LDFLAGS = -module -avoid-version
 elographics_drv_ladir = @inputdir@
-
-elographics_drv_la_SOURCES = xf86Elo.c
+elographics_drv_la_SOURCES = elographics.c
