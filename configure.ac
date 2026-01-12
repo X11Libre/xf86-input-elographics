@@ -6,4 +6,5 @@ AC_INIT([xlibre-xf86-input-elographics],
 
 XLIBRE_INIT_MODULE_AM(elographics)
 
-AC_OUTPUT([Makefile src/Makefile man/Makefile man/elographics.man])
+AC_CONFIG_FILES([Makefile src/Makefile man/Makefile man/elographics.man])
+AC_OUTPUT
